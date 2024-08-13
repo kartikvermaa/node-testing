@@ -3,7 +3,7 @@ const http = require("http");
 const myServer = http.createServer((req,res) =>{
     console.log("New Request Recived!!");
     console.log("hello from ec2 heyy");
-    console.log("hiiii from pyy")
+    console.log("done")
     res.end("NOW WE ARE ON EC2 Done Successfully flask updated on 13/8/24 ");
     
 });
