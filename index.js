@@ -4,7 +4,7 @@ const myServer = http.createServer((req,res) =>{
     console.log("New Request Recived!!!!!");
     console.log("hi from ec2");
     console.log("done")
-    res.end("NOW WE ARE ON EC2 Done Successfully flask updated on 13/8/24 ");
+    res.end("NOW WE ARE ON EC2 Done Successfully flask  ");
     
 });
 
