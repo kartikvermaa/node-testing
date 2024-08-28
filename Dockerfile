@@ -1,21 +1,27 @@
-# Use the official Node.js image.
-FROM node:14
+FROM ubuntu 
 
-# Set the working directory in the container.
-WORKDIR /usr/src/app
+RUN apt-get update
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+RUN apt-get install -y curl 
 
-# Install dependencies
-RUN npm install
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 
-# Copy the rest of the application code
-COPY . .
+RUN apt-get upgrade -y    
 
-# Expose the port the app runs on
-EXPOSE 9000
+RUN apt-get install -y nodejs
 
-# Command to run the application
-CMD ["node", "index.js"]
 
+
+
+
+COPY package.json package.json
+
+COPY package-lock.json package-lock.json
+
+COPY index.js index.js
+
+
+
+RUN npm install 
+
+ENTRYPOINT [ "node", "index.js" ]
