@@ -4,7 +4,7 @@ const myServer = http.createServer((req,res) =>{
     console.log("New changed Request Recived!!");
     console.log("its working, it is latest code new edit ");  
 
-    res.end(" Hey WE ARE ON EC2 AND CONTAINERIZATION Successfully");
+    res.end(" Hey WE ARE ON EC2 AND CONTAINERIZATION is Successfully");
     
 });
 
