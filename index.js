@@ -13,7 +13,7 @@ Technologies used include:
 - PM2 for process management
 - GitHub Webhooks for continuous integration
 
-Thank you for your time!`);
+Thank you !`);
 
     
     
